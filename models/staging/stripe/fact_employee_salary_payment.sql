@@ -5,7 +5,7 @@ WITH RankedSalaries AS (
         hire_date,
         salary_amount,
         ROW_NUMBER() OVER (PARTITION BY employee_id ORDER BY hire_date DESC) AS rn
-    FROM DBT.stripe.fact_employee_salary
+    FROM {{ source("stripe", "FACT_EMPLOYEE_SALARY") }}
 )
 SELECT 
     employee_id,
