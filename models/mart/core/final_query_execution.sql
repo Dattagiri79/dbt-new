@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 WITH 
 -- Step 1: Reference recent_hired model
@@ -12,7 +12,7 @@ department_salary AS (
 )
 
 -- Step 3: Final output combining all transformations
-SELECT 
+SELECT distinct
     e.id,
     e.name,
     e.hire_date,
