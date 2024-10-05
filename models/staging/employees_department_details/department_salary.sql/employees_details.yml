@@ -6,6 +6,10 @@ sources:
     schema: DBT_DATTAGIRI79
     tables:
       - name: DBTUSE
+        loaded_at_field: hire_date
+        freshness: 
+          warn_after: {count: 20,period: day}
+          error_after: {count: 28,period: day}
       - name: DEPARTMENTS
       - name: SALARIES
       - name: EMPLOYEES
