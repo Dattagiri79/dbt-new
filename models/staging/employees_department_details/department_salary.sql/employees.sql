@@ -3,4 +3,4 @@ SELECT
     INITCAP(TRIM(name)) AS name,
     department_id,
     hire_date
-FROM DBT.DBT_DATTAGIRI79.dbtuse
+FROM {{ source("DBT_DATTAGIRI79", "DBTUSE") }}
