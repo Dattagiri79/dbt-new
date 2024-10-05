@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: DBT_DATTAGIRI79
+    database: DBT
+    schema: DBT_DATTAGIRI79
+    tables:
+      - name: DBTUSE
+      - name: DEPARTMENTS
+      - name: SALARIES
+      - name: EMPLOYEES
+    
