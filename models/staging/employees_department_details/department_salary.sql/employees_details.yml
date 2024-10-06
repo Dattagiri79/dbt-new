@@ -10,3 +10,19 @@ sources:
       - name: SALARIES
       - name: EMPLOYEES
     
+
+models:
+  - name: department_salary
+    columns:
+      - name: department_id
+        tests:
+          - not_null
+          - unique
+      - name: department_name
+        tests:
+         - accepted_values:
+             values:
+               - "Human Resources"
+               - "Engineering"
+               - "Marketing"
+               - "Sales"
