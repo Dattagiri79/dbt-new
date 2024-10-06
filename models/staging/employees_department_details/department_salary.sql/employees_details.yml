@@ -6,6 +6,11 @@ sources:
     schema: DBT_DATTAGIRI79
     tables:
       - name: DBTUSE
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
       - name: DEPARTMENTS
       - name: SALARIES
       - name: EMPLOYEES
