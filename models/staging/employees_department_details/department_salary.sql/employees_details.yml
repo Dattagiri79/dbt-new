@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: DBT_DATTAGIRI79
     database: DBT
-    schema: DBT_DATTAGIRI79
+    schema: public
     tables:
       - name: DBTUSE
         columns:
