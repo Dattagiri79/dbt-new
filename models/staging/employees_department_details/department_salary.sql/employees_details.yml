@@ -14,7 +14,6 @@ sources:
       - name: DEPARTMENTS
       - name: SALARIES
       - name: EMPLOYEES
-    
 
 models:
   - name: department_salary
@@ -25,9 +24,9 @@ models:
           - unique
       - name: department_name
         tests:
-         - accepted_values:
-             values:
-               - "Human Resources"
-               - "Engineering"
-               - "Marketing"
-               - "Sales"
+          - accepted_values:
+              values:
+                - "Human Resources"
+                - "Engineering"
+                - "Marketing"
+                - "Sales"
