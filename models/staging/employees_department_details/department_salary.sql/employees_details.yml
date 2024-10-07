@@ -3,10 +3,31 @@ version: 2
 sources:
   - name: DBT_DATTAGIRI79
     database: DBT
-    schema: DBT_DATTAGIRI79
+    schema: public
     tables:
       - name: DBTUSE
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
       - name: DEPARTMENTS
       - name: SALARIES
       - name: EMPLOYEES
     
+
+models:
+  - name: department_salary
+    columns:
+      - name: department_id
+        tests:
+          - not_null
+          - unique
+      - name: department_name
+        tests:
+         - accepted_values:
+             values:
+               - "Human Resources"
+               - "Engineering"
+               - "Marketing"
+               - "Sales"
